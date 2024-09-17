@@ -267,23 +267,28 @@ input[type="range"]::-moz-range-thumb {
 .accent {
     background-color: var(--accent);
     flex-direction: column;
+    padding: 50px;
 }
 
 .motive-wrapper {
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 25% 25%; 
     color: var(--background-color);
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+    margin: 50px 80px;
 }
 
 #bradley-pic {
-    width: min(50vw, 200px); 
+    width: clamp(100px, 75%, 800px); 
     grid-row: span 2;
     grid-column: span 1;
     border: 5px solid var(--primary);
-    border-radius: 10px;
+    border-radius: 10px; 
 }
 
 .accent p {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 1; 
 }
