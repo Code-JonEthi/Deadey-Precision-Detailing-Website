@@ -1,0 +1,157 @@
+:root {
+    --background: #030821;
+    --text: #fff;
+    --primary: rgb(163, 0, 0);
+    --accent: #c3ecec;
+}
+
+@font-face {
+    font-family: "Copperplate";
+    src: url("Copperplate.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Copperplate", serif;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+#logo {
+    width: 100px;
+    margin: 20px;
+}
+
+header h1 {
+    padding: 15px 5rem;
+    border-bottom: var(--primary) solid 2px;
+    margin-bottom: 30px;
+}
+
+nav {
+    margin: 20px 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 5px 10px;
+    margin: 0 10%;
+}
+
+#current {
+    border-bottom: var(--primary) solid 2px;
+}
+
+.cards-wrapper {
+    display:flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    margin: 80px 10%;
+}
+
+.cards {
+    display: grid;
+    width: auto;
+    justify-content: space-around;
+    gap: 20px;
+    grid-template-columns: repeat(3, auto);
+}
+
+.card {
+    border: var(--accent) solid 2px;
+    border-radius: 10px;
+    display: grid;
+    width: 415px;
+    padding: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 5px;
+}
+
+.card h2, h3 {
+    grid-column: span 3;
+}
+
+h3 {
+    color: gray;
+}
+
+
+.profile-pic {
+    grid-row: span 2;
+    width: 64px;
+    border-radius: 50%;
+    border: var(--primary) solid 2px;
+}
+
+.contact-wrapper {
+    width: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper h1 {
+    border-bottom: var(--primary) solid 2px;
+    padding: 10px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+    border: solid var(--accent) 2px;
+    border-radius: 10px;
+    margin: 50px 35%;
+    line-height: 200%; 
+    width: fit-content;
+}
+
+.contact .email, .phone {
+    transition: all 50ms;
+}
+
+.contact .email:hover, .phone:hover {
+    color: lightgray;
+}
+
+.card p {
+    grid-column: span 4;
+}
+
+@media (max-width: 1400px) {
+    .cards {
+        grid-template-columns: repeat(2, auto);
+    }
+    
+}
+
+@media (max-width: 950px) {
+    .cards {
+        grid-template-columns: repeat(1, auto);
+    }
+    
+}

@@ -1,0 +1,289 @@
+:root {
+    --background-color: #FFF4E0;
+    --text-color: #4D4D4D;
+    --accent: #A67B5B;
+    --primary: #B46060;
+    --secondary: #FFBF9B;
+    --light-gray: #d9d9d9;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Rubik", sans-serif;
+    color: var(--text-color);
+}
+
+html {
+    background-color: var(--background-color);
+}
+
+h1  {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.logo {
+    width: 50px;
+    margin: 8px;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 30px;
+    list-style-type: none;
+    font-size: 18;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+nav a {
+    padding: 5px;
+    border: solid 2px var(--background-color);
+    transition: all 200ms;
+}
+
+nav a:hover {
+    border: solid 2px var(--primary);
+    border-radius: 10px;
+}
+
+.gradient {
+    width: 100%;
+    height: 30px;
+}
+
+section {
+    width: auto;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    padding: 0;
+    background-image: url("imgs/Hero.jpg");
+    background-size: cover;
+    background-position-y: bottom;
+    height: 500px;
+    justify-content: space-between;
+    color: var(--background-color);
+    text-align: left;
+    flex-direction: column;
+    flex-grow: 4;
+}
+
+.light-text {
+    color: var(--background-color);
+}
+
+.hero-content {
+    display: inherit;
+    color: var(--background-color);
+    flex-direction: column;
+    margin-left: 15%;
+    padding: 5% 0;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.button {
+    width: 100px;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 10px;
+    transition: all 150ms;
+}
+
+.button:hover {
+    border: var(--primary) 2px solid;
+    background-color: #B46060bb;
+    font-size: 18px;
+}
+
+.gradient-down {
+    width: 100%;
+    height: 30px;
+    justify-self: flex-start;
+    background-image: linear-gradient(var(--background-color), rgba(255, 255, 255, 0));
+}
+
+.gradient-up {
+    width: 100%;
+    height: 30px;
+    justify-self: flex-end;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), var(--background-color));
+}
+
+.examples {
+    margin: 50px 0;
+}
+
+.sliding-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 75%, 800px);
+    margin: 40px auto;
+}
+
+.sliding-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+.sliding-img {
+    border: 5px var(--primary) solid;
+    position: relative;
+    border-radius: 5px;
+    display: flex
+}
+
+.sliding-img .before {
+    position:absolute;
+    top: 0;
+    width: 50%;
+}
+
+.slider {
+    width: 110%;
+    margin: 20px;
+}
+
+.before-after {
+    display: flex;
+    width: 115%;
+    text-align: start;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 110%;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--light-gray);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: var(--light-gray);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--secondary);
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.cards {
+    margin: 75px 0;
+    width: auto;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    column-gap: 10%;
+}
+
+.cards h1 {
+    grid-column: span 2;
+}
+
+.cards h2 {
+    margin: 15px 0px;
+}
+
+.card {
+    background-color: #b4606080;
+    border-radius: 10px;
+    border: 3px solid var(--primary);
+    padding: 5% 15%;
+    height: 20rem;
+    width: clamp(100px, 75%, 400px);
+    justify-content: center;
+    align-items: center;
+}
+
+.card li {
+    text-align: left;
+}
+
+.accent {
+    background-color: var(--accent);
+    flex-direction: column;
+}
+
+.motive-wrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    color: var(--background-color);
+}
+
+#bradley-pic {
+    width: min(50vw, 200px); 
+    grid-row: span 2;
+    grid-column: span 1;
+    border: 5px solid var(--primary);
+    border-radius: 10px;
+}
+
+.accent p {
+    grid-column: span 2;
+    grid-row: span 1; 
+}
